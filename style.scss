@@ -1,0 +1,173 @@
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+
+  background: url("cosmos-1845140_1920 1.jpg") no-repeat;
+  object-fit: cover;
+
+}
+
+main {
+  & h1{
+    color: white;
+    text-align: center;
+    text-shadow: 0px 4px 19px rgba(0, 0, 0, 0.97);
+    font-size: 55px;
+    margin: 90px 0 30px 0;
+    font-weight: 500;
+  }
+}
+
+form {
+  color: white;
+  background: #171929;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
+  border-radius: 27px;
+  display: grid;
+  width: 389px;
+  grid-gap: 35px 0;
+  margin: 0 auto;
+  padding: 41px 45px;
+  box-sizing: border-box;
+  & div{
+    position: relative;
+    min-height: 46px;
+  }
+  & .textareaBox{
+    min-height: 75px;
+    height: auto;
+    & label{
+      margin: 0 0 20px 0;
+    }
+    & textarea{
+      margin: 20px 0 0 0;
+      position: static;
+    }
+  }
+  & input, & textarea{
+    width: 100%;
+    resize: none;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    padding: 5px 0;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #3F4363;
+    background: #171929;
+    transition: all 0.2s;
+
+    &:focus {
+      transition: all 0.2s;
+      border-bottom: 1px solid #FFFFFF;
+      outline: none;
+      & ~ label{
+        color: white;
+        transition: all 0.2s;
+        & span{
+          color: #797EA3;
+        }
+      }
+    }
+  }
+  & label{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  & label, & p {
+    transition: all 0.2s;
+    color: #797EA3;
+    font-size: 15px;
+  }
+
+  & .formInfo {
+    &  p {
+      text-align: center;
+      font-size: 18px;
+      color: white;
+    }
+
+    & span {
+      line-height: 120%;
+      text-align: center;
+      display: block;
+      color: #797EA3;
+    }
+
+  }
+  & .btnBox{
+    text-align: center;
+  }
+  & button{
+    background: #2C2F47;
+    border-radius: 28px;
+    padding: 11px 40px;
+    border: none;
+    width: 121px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  & .checkboxField{
+    text-align: center;
+    & label{
+      color: #797EA3;
+      position: relative;
+      & a{
+        color: #B9BEE5;
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        left: -40px;
+        top: -6px;
+        width: 31px;
+        height: 31px;
+        background: #2C2F47;
+        border-radius: 8px;
+      }
+      &::before{
+        content:"";
+        display: none;
+        position: absolute;
+        width: 6px;
+        border: 3px solid white;
+        border-top: none;
+        border-left: none;
+        height: 12px;
+        left: -29px;
+        z-index: 4;
+        opacity: 0.7;
+        transform: rotate(45deg);
+        border-radius: 2px 0 2px 2px;
+      }
+    }
+    & input[type='checkbox']{
+      display: none;
+      &:checked ~ label{
+        &::before{
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 400px){
+  form {
+    color: white;
+    background: #171929;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.7);
+    border-radius: 27px;
+    display: grid;
+    width: 320px;
+    grid-gap: 35px 0;
+    margin: 0 auto;
+    padding: 41px 45px;
+
+  }
+}
